@@ -1,0 +1,130 @@
+# 1. Clean your room!
+## 1.1. Read, then fix this code
+
+```
+$room_is_filthy = true;
+
+if( write_your_condition_here ){
+	echo "Yuk, Room is dirty : let's clean it up !";
+	cleanup_room();
+	echo "<br>Room is now clean!";
+	$room_is_filthy = false;
+} else {
+	echo "<br>Nothing to do, room is neat.";
+}
+```
+
+To test your code, change the value of $room_is_filthy and check that the message displayed is relevant.
+
+## 1.2. Improve it
+
+Let's now make our script a little smarter by allowing more than 2 possible values. The room could be either "health hazard", "filthy", "dirty", "clean", "immaculate" in that order. Store them in an array $possible_states.
+
+Use a if/ elseif / else for that. Invent the messages to display for each use case.
+
+Need a headstart? Here is a starting base, that you'll need to fix.
+
+```
+// 1.2 Clean your room Exercise, improved
+
+// Create the array of possible states
+$possible_states = [];
+
+// When testing, change the index value to navigate to the possible array values
+$room_filthiness = $possible_states[0]; 
+
+if( write_your_condition_here ){
+	echo "Yuk, Room is Disgusting! Let's clean it up !";
+} else if( write_your_condition_here ){
+	echo "Yuk, Room is dirty : let's clean it up !";
+// ...
+} else {
+	echo "<br>Nothing to do, room is neat.";
+}
+```
+
+Expected result: when changing the value of $room_filthiness to any of the possible room states, the relevant message should be displaye
+
+# 2. Display a different greeting message depending on the time of the day.
+
+You know what's worse than a stupid robot? A stupid impolite robot. Let's fix that.
+
+Write a script that implements these specifications :
+
+- If the time is between 05h00 and 09h00, display "Good morning !".
+- If the time is between 09h01 and 12h00, display "Good day !".
+- If the time is between 12h01 and 16h00, display "Good afternoon !".
+- If the time is between 16h01 and 21h00, display "Good evening !".
+- If the time is between 21h01 and 04h59, display "Good night !".
+Tip: you can combine multiple conditions (using AND / OR).
+
+Here is a head start.
+
+```
+// 2. "Different greetings according to time" Exercise
+
+$now = ; // How to get the current time in PHP ? Google is your friend ;-)
+
+// Test the value of $now and display the right message according to the specifications.
+if( condition){
+} ...
+
+```
+
+# 3. Display a different greeting
+## 3.1 Display a different greeting according to the user's age.
+
+Let's continue to make our robot a little more civil and greet humans properly, taking into account their age.
+
+Here is the user experience we aim for :
+First, users see a form asking for their age :
+
+Please type your age : __
+
+When they submit the form, the page displays the right message:
+
+- if age is less than 12 years old, display "Hello kiddo!"
+- if age is between 12 and 18 years old, display "Hello Teenager !"
+- if age is between 18 and 115 years old, display Hello Adult !"
+- if age is beyond 115 years old, display "Wow! Still alive ? Are you a robot, like me ? Can I hug you ?"
+Have both the form and the processing script in the same file. Use the GET method.
+
+Here is a headstart.
+
+```
+// 3. "Different greetings according to age" Exercise
+
+if (isset($_GET['age']){
+	// Form processing
+
+}
+// Form (incomplete)
+?>
+<form method="get" action="">
+	<label for="age">...</label>
+	<input type="" name="age">
+	<input type="submit" name="submit" value="Greet me now">
+</form>
+```
+
+## 3.2. Display a different greeting according to the user's age and gender.
+
+Improve the previous form to add another question: "Man or Woman?". Use an input of type radio to capture the data.
+
+If gender is "Woman", the displayed message should be adapted accordingly.
+
+For example, if the user age is between 12 and 18 and the gender is female, display "Hello Miss Teen!" otherwise, display "Hello mister Teen!".
+
+Do the same for all the other age ranges.
+
+Tip: You can nest conditional structures inside others.
+
+## 3.3. Display a different greeting according to the user's age, gender and mothertongue.
+
+Improve the previous form to add yet another question: "Do you speak English ? ". Use an input of type radio to capture the data. Possible answers: "yes" or "no".
+
+Then modify your form processing script to implement this :
+
+If age is below 12 and the user replies "yes", display : "Hello boy!" or "Hello Girl!" according to the gender indicated.
+If the answer is "no", display "Aloha boy" or "Aloha Girl"
+Adapt all the other answers accordingly, using "Aloha" instead of "Hello".
