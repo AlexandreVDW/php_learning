@@ -159,3 +159,19 @@ In a new file ternary.php declare a $hello variable which value is a greeting me
 ### 6.2. Unicorn
 
 In a new file unicorn.php, create an html form asking "Are you a human, a cat or a unicorn ?". When submitted, the screen displays an animated Gif showing either a human, a cat or a unicorn, as per the user input (you can find gifs here). Use GET or POST as method, whichever you like. Use a ternary operation to evaluate the condition.
+
+## 7.0. excuse generator
+
+In an "excuse.php" file, create an "apology generator" to make life easier for parents of children in primary school.
+
+You need a form with these questions:
+
+- name of the child
+- Gender of the child (girl or boy)
+- name of the teacher
+- a reason for the absence to be chosen among options (radio type input):
+    + illness
+    + death of the pet (or a family member)
+    + significant extra-curricular activity
+    + any other excuse of your choice
+For each option, invent an appropriate excuse according to the chosen option
