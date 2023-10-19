@@ -1,5 +1,5 @@
-# 1. Clean your room!
-## 1.1. Read, then fix this code
+## 1. Clean your room!
+### 1.1. Read, then fix this code
 
 ```
 $room_is_filthy = true;
@@ -16,7 +16,7 @@ if( write_your_condition_here ){
 
 To test your code, change the value of $room_is_filthy and check that the message displayed is relevant.
 
-## 1.2. Improve it
+### 1.2. Improve it
 
 Let's now make our script a little smarter by allowing more than 2 possible values. The room could be either "health hazard", "filthy", "dirty", "clean", "immaculate" in that order. Store them in an array $possible_states.
 
@@ -45,7 +45,7 @@ if( write_your_condition_here ){
 
 Expected result: when changing the value of $room_filthiness to any of the possible room states, the relevant message should be displaye
 
-# 2. Display a different greeting message depending on the time of the day.
+## 2. Display a different greeting message depending on the time of the day.
 
 You know what's worse than a stupid robot? A stupid impolite robot. Let's fix that.
 
@@ -71,8 +71,8 @@ if( condition){
 
 ```
 
-# 3. Display a different greeting
-## 3.1 Display a different greeting according to the user's age.
+## 3. Display a different greeting
+### 3.1 Display a different greeting according to the user's age.
 
 Let's continue to make our robot a little more civil and greet humans properly, taking into account their age.
 
@@ -107,7 +107,7 @@ if (isset($_GET['age']){
 </form>
 ```
 
-## 3.2. Display a different greeting according to the user's age and gender.
+### 3.2. Display a different greeting according to the user's age and gender.
 
 Improve the previous form to add another question: "Man or Woman?". Use an input of type radio to capture the data.
 
@@ -119,7 +119,7 @@ Do the same for all the other age ranges.
 
 Tip: You can nest conditional structures inside others.
 
-## 3.3. Display a different greeting according to the user's age, gender and mothertongue.
+### 3.3. Display a different greeting according to the user's age, gender and mothertongue.
 
 Improve the previous form to add yet another question: "Do you speak English ? ". Use an input of type radio to capture the data. Possible answers: "yes" or "no".
 
@@ -128,3 +128,34 @@ Then modify your form processing script to implement this :
 If age is below 12 and the user replies "yes", display : "Hello boy!" or "Hello Girl!" according to the gender indicated.
 If the answer is "no", display "Aloha boy" or "Aloha Girl"
 Adapt all the other answers accordingly, using "Aloha" instead of "Hello".
+
+## 4. The Girl Soccer team
+### 4.1 You want to create a soccer team for girls between 21 and 40 years old.
+
+Create a form asking for the age, gender and name of the person. Use the $age and $gender variables in an if/else to display a "welcome to the team !" or "Sorry you don't fit the criteria" message.
+
+### 4.2 Achieve the same, without the ELSE.
+
+A key aspect of coding conditions is to keep them as simple as possible. Improve the previous exercise by using only an if statement (without the else), and a default value that changes only if the condition is true.
+
+## 5. "School sucks!" Exercise
+
+Start a new form that would allow a (nasty) teacher to grade a student.
+
+It would display a different message according to the number annotated :
+
+- note below 4 : "This work is really bad. What a dumb kid! "
+- note between 5 and 9 : "This is not sufficient. More studying is required."
+- note equals 10 : "barely enough!"
+- note is 11, 12, 13 or 14 : "Not bad!"
+- note is 15, 16, 17 or 18 : "Bravo, bravissimo!"
+- note is 19 or 20 : "Too good to be true : confront the cheater!"
+
+## 6. Ternary
+### 6.1. Ternary exercices
+
+In a new file ternary.php declare a $hello variable which value is a greeting message. That greeting message depends on another variable $gender, which can either be "M" or "F". Finish by displaying the resulting message.
+
+### 6.2. Unicorn
+
+In a new file unicorn.php, create an html form asking "Are you a human, a cat or a unicorn ?". When submitted, the screen displays an animated Gif showing either a human, a cat or a unicorn, as per the user input (you can find gifs here). Use GET or POST as method, whichever you like. Use a ternary operation to evaluate the condition.
